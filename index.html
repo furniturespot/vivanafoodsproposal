@@ -1,1 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivana Foods: Global B2B Digital Growth Proposal | SPARK GEN MEDIA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* COLOR PALETTE & VARIABLES (Futuristic/Dark Theme) */
+        :root {
+            --color-background: #111827; /* Dark Base */
+            --color-foreground: #1f2937; /* Section Background */
+            --color-primary: #3b82f6; /* Accent Blue/Glow */
+            --color-secondary: #10b981; /* Accent Green/Growth */
+            --color-text: #e5e7eb; /* Light Gray Text */
+            --color-subtle-text: #9ca3af; /* Sub-text/Body */
+            --color-dark-text: #d1d5db; /* Strong Text */
+            --color-accent-bg: #2d3848; /* Card Background */
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --max-width: 1200px;
+        }
 
+        /* GLOBAL STYLES & RESET */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--color-subtle-text);
+            background-color: var(--color-background);
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        /* HEADINGS & TEXT */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+            color: var(--color-dark-text);
+        }
+
+        h2 { font-size: 2.5em; text-transform: uppercase; text-align: center; margin-bottom: 10px; font-weight: 700; }
+        h3 { font-size: 1.6em; color: var(--color-primary); margin-top: 0; text-align: left; font-weight: 700; }
+        
+        strong {
+            font-weight: 600;
+            color: var(--color-dark-text); 
+        }
+        
+        .bg-light { background-color: var(--color-foreground); }
+        .bg-primary { background-color: var(--color-primary); color: white; }
+
+        .content-section { padding: 90px 0; }
+        .section-header { margin-bottom: 50px; }
+
+        /* BUTTONS */
+        .cta-button {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: var(--color-secondary);
+            color: var(--color-background);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5); /* Glow */
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0c9c6f;
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.8);
+        }
+        
+        /* LIST STYLES */
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        .feature-list li::before {
+            content: '\27A4'; /* Geometric Arrow */
+            color: var(--color-primary);
+            font-size: 1em;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 700;
+        }
+        
+        /* TWO COLUMN LAYOUT */
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .image-block {
+            background-color: var(--color-background);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+            text-align: center;
+            color: var(--color-primary);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* SVG SPECIFIC STYLES */
+        .svg-container { max-width: 100%; height: auto; }
+        .node-path { stroke: var(--color-primary); stroke-width: 1; opacity: 0.4; }
+        .node-circle { fill: var(--color-foreground); stroke: var(--color-secondary); stroke-width: 2; }
+
+
+        /* HEADER & NAVIGATION */
+        .main-header {
+            background-color: var(--color-foreground);
+            box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.6em;
+            color: var(--color-primary);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: var(--color-text);
+            padding: 10px 15px;
+            font-weight: 500;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+        
+        .main-nav a:hover {
+            color: var(--color-primary);
+            border-bottom: 3px solid var(--color-primary);
+        }
+
+        .menu-toggle { display: none; font-size: 1.8em; background: none; border: none; color: var(--color-text); cursor: pointer; }
+
+        /* HERO SECTION */
+        .hero-section {
+            background: radial-gradient(circle at top right, #1f2937 0%, var(--color-background) 60%);
+            color: white;
+            padding: 180px 0 150px;
+            text-align: center;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .hero-section h2 {
+            font-size: 4em;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+            letter-spacing: 2px;
+        }
+
+        .hero-section .pre-heading {
+            font-size: 1em;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--color-secondary);
+        }
+
+        .hero-section .subtext {
+            font-size: 1.4em;
+            margin-bottom: 50px;
+            font-weight: 400;
+            color: var(--color-text);
+        }
+        
+        /* SUMMARY SECTION */
+        .highlight {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin: 20px 0 30px;
+        }
+        
+        /* DIGITAL MARKETING CARDS */
+        .content-card {
+            background-color: var(--color-accent-bg);
+            border-left: 4px solid var(--color-secondary);
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s, border-color 0.3s;
+            margin-bottom: 30px;
+            border: 1px solid var(--color-accent-bg);
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            border-left-color: var(--color-primary);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+        }
+
+        .content-card h4 {
+            color: var(--color-primary);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            font-size: 1.3em;
+        }
+
+        /* ROADMAP TIMELINE */
+        .roadmap-section { border-top: 1px dashed rgba(255, 255, 255, 0.1); }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            padding: 40px 0;
+            margin-top: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 55px;
+            left: 5%; 
+            right: 5%;
+            height: 4px;
+            background: var(--color-primary);
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        .timeline-step:nth-child(even) { margin-top: 80px; }
+
+        .timeline-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 0 10px;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-secondary);
+            color: var(--color-background);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: 700;
+            font-size: 1.3em;
+            border: 4px solid var(--color-foreground);
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.6); /* Step Glow */
+        }
+        
+        .timeline-step p {
+            font-weight: 500;
+            color: var(--color-dark-text);
+            margin-top: 10px;
+        }
+
+        /* FINAL CTA & CONTACT */
+        .cta-final-section {
+            background-color: var(--color-background);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Center the H3 explicitly in the final section */
+        .cta-final-section h3 { 
+            color: var(--color-primary); 
+            margin-bottom: 40px;
+            text-align: center; 
+        }
+
+        .contact-box {
+            background-color: var(--color-foreground);
+            color: var(--color-dark-text);
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 30px auto 0;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            border-top: 4px solid var(--color-secondary);
+        }
+
+        .contact-box h4 { color: var(--color-primary); font-size: 1.6em; margin-bottom: 10px; }
+
+        .contact-info { margin: 20px 0 30px; font-size: 1.1em; line-height: 1.8; color: var(--color-subtle-text); }
+
+        .primary-cta {
+            background-color: var(--color-primary);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+        }
+
+        .primary-cta:hover { background-color: #3168c4; box-shadow: 0 0 25px rgba(59, 130, 246, 0.8); }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--color-background);
+            color: var(--color-subtle-text);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+/* WhatsApp Button */ .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #48ff00; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0, 255, 0, 0.4); cursor: pointer; transition: all 0.3s; z-index: 1000; } .whatsapp-float:hover { transform: scale(1.1); } .whatsapp-float::after { content: "1"; position: absolute; top: -5px; right: -5px; background: #ff3b30; color: white; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold; } .whatsapp-icon { width: 32px; height: 32px; fill: white; }
+        .mobile-only-btn {
+    display: none;
+}
+
+
+
+        /* RESPONSIVE DESIGN: MOBILE OPTIMIZATION */
+        @media (max-width: 992px) {
+            h2 { font-size: 2em; }
+            .content-section { padding: 60px 0; }
+            .two-col-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Navigation adjustments for mobile */
+            .main-nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-foreground); box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
+            .main-nav.active { display: block; }
+            .main-nav ul { flex-direction: column; text-align: center; }
+            .main-nav a { display: block; padding: 15px 0; border-bottom: 1px solid #333; }
+            .menu-toggle { display: block; }
+
+            /* HERO */
+            .hero-section { padding: 100px 0 80px; }
+            .hero-section h2 { font-size: 2.8em; }
+            .hero-section .subtext { font-size: 1.2em; }
+            
+            /* TIMELINE */
+            .timeline { flex-direction: column; align-items: flex-start; padding-top: 0; }
+            .timeline::before { display: none; }
+            .timeline-step { margin-bottom: 30px; text-align: left; display: flex; align-items: center; padding: 0; width: 100%; }
+            .timeline-step:nth-child(even) { margin-top: 0; }
+            .step-icon { margin: 0 15px 0 0; flex-shrink: 0; }
+            .image-block { min-height: 200px; }
+            
+            /* WHATSAPP MOBILE ADJUSTMENT */
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container nav-content">
+            <h1 class="logo">SPARK GEN MEDIA</h1>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#summary">Overview</a></li>
+                    <li><a href="#website-dev">Website</a></li>
+                    <li><a href="#digital-marketing">Digital Growth</a></li>
+                    <li><a href="#ai-agents">AI & Automation</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                &#9776;
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <p class="pre-heading">Global B2B Digital Growth & Customer Acquisition Proposal</p>
+            <h2>VIVANA FOODS: GO GLOBAL</h2>
+            <p class="subtext">Building a globally trusted B2B food brand and a scalable digital acquisition system.</p>
+            <a href="#website-dev" class="cta-button">Explore the Proposal</a>
+        </div>
+    </section>
+
+    <section id="summary" class="content-section bg-light">
+        <div class="container" style="text-align: center;">
+            <div class="section-header">
+                <h2>Executive Summary & Objectives</h2>
+            </div>
+            <p class="highlight">
+                This proposal is designed for Vivana Foods Pvt Ltd to acquire <strong>high-quality international B2B customers</strong> and establish a strong global brand presence.
+            </p>
+            <p style="font-size: 1.1em; max-width: 800px; margin: 0 auto 25px; line-height: 1.8;">
+                SPARK GEN MEDIA will act as a <strong>long-term digital growth partner</strong> by building a full-funnel digital ecosystem focused on trust, authority, and scalable demand generation.
+            </p>
+            <p style="font-size: 1.1em; font-style: italic; color: var(--color-subtle-text); max-width: 800px; margin: 0 auto 30px;">
+                B2B food brands face long sales cycles, strict compliance expectations, and high trust requirements. Our objective is to position Vivana Foods Pvt Ltd as a <strong>credible global supplier</strong> while driving consistent, high-intent B2B leads across multiple international markets.
+            </p>
+        </div>
+    </section>
+
+    <section id="website-dev" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Website Development Proposal</h2>
+            </div>
+            <div class="two-col-grid">
+                <div class="content-block">
+                    <p style="font-size: 1.1em; margin-bottom: 20px;">
+                        The Vivana Foods website will be the central hub for all B2B acquisition, built on the principle of high conversion, trust, and global SEO readiness.
+                    </p>
+                    <ul class="feature-list">
+                        <li><strong>High-Conversion Design:</strong> Focused on global buyers with clear CTAs, lead capture systems, and a clean, professional user experience.</li>
+                        <li><strong>Global SEO Readiness:</strong> Includes competitor research, buyer journey mapping, and full technical SEO optimization from the ground up.</li>
+                        <li><strong>Country-Wise Landing Pages:</strong> Specific pages to target different international markets effectively and efficiently.</li>
+                        <li><strong>Trust Elements:</strong> Integration of certifications, compliance information, and case studies to rapidly build credibility with B2B buyers.</li>
+                    </ul>
+                </div>
+                <div class="image-block">
+                    <svg class="svg-container" width="100%" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="20" width="360" height="210" rx="8" stroke="var(--color-primary)" stroke-width="2" opacity="0.6"/>
+                        <rect x="30" y="30" width="100" height="10" rx="2" fill="var(--color-primary)"/>
+                        <rect x="30" y="55" width="340" height="10" rx="2" fill="var(--color-text)" opacity="0.3"/>
+                        <rect x="30" y="80" width="340" height="10" rx="2" fill="var(--color-text)" opacity="0.3"/>
+                        <rect x="30" y="105" width="150" height="10" rx="2" fill="var(--color-secondary)"/>
+                        
+                        <circle cx="200" cy="165" r="30" fill="var(--color-primary)" opacity="0.2"/>
+                        <path d="M190 170 L210 170 L210 160 L190 160 Z" fill="var(--color-primary)"/>
+                        <path d="M200 135 L200 195" stroke="var(--color-primary)" stroke-width="1" opacity="0.5"/>
+                        
+                        <text x="50" y="170" fill="var(--color-subtle-text)" font-size="12" font-family="var(--font-main)">GLOBAL SEO FRAMEWORK</text>
+                        <text x="50" y="190" fill="var(--color-secondary)" font-size="12" font-family="var(--font-main)">TRUST INTEGRATION [CERT]</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="digital-marketing" class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Digital Marketing & Full-Funnel Growth</h2>
+                <p style="text-align: center; font-size: 1.2em; color: var(--color-subtle-text); margin-top: -10px;">Building authority and driving high-intent B2B traffic.</p>
+            </div>
+            
+            <div class="two-col-grid">
+                <div class="content-block">
+                    <div class="content-card">
+                        <h4>Super Strong SEO Strategy</h4>
+                        <p>A long-term international SEO strategy using B2B keyword research, on-page and technical SEO, authority content creation, and <strong>digital PR-based backlink building</strong> to ensure sustainable organic growth.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4>Social Media & Influencers</h4>
+                        <p>Build credibility and brand recall on platforms like Instagram and Facebook. We leverage industry-specific professionals to build <strong>third-party trust and brand authority</strong> via testimonials and educational collaborations.</p>
+                    </div>
+                </div>
+                <div class="content-block">
+                    <div class="image-block" style="margin-bottom: 30px; height: 250px;">
+                        <svg class="svg-container" width="100%" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 50 200 L 150 100 L 250 150 L 350 50" stroke="var(--color-secondary)" stroke-width="4"/>
+                            <circle cx="50" cy="200" r="5" fill="var(--color-secondary)"/>
+                            <circle cx="150" cy="100" r="5" fill="var(--color-secondary)"/>
+                            <circle cx="250" cy="150" r="5" fill="var(--color-secondary)"/>
+                            <circle cx="350" cy="50" r="5" fill="var(--color-secondary)"/>
+
+                            <path d="M 50 50 L 350 50 L 350 200 L 50 200 Z" stroke="var(--color-primary)" stroke-width="1" opacity="0.3" fill="none"/>
+                            
+                            <text x="350" y="40" fill="var(--color-primary)" font-size="16" font-weight="700" text-anchor="end" font-family="var(--font-heading)">SCALABLE GROWTH</text>
+                            <text x="50" y="215" fill="var(--color-subtle-text)" font-size="12" font-family="var(--font-main)">AWARENESS</text>
+                            <text x="150" y="90" fill="var(--color-subtle-text)" font-size="12" font-family="var(--font-main)" text-anchor="middle">LEADS</text>
+                            <text x="250" y="170" fill="var(--color-subtle-text)" font-size="12" font-family="var(--font-main)" text-anchor="middle">QUALIFIED</text>
+
+                            <path d="M180 20 L220 20 L200 0 Z" fill="var(--color-secondary)" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <div class="content-card">
+                        <h4>Performance Advertising Strategy</h4>
+                        <p>Multi-platform paid advertising across Google, Facebook, Instagram, and LinkedIn. We target decision-makers using a <strong>funnel-based approach</strong> to ensure high lead quality and scalable growth in international markets.</p>
+                    </div>
+                    <div class="content-card">
+                        <h4>Lead Management & CRM Process</h4>
+                        <p>All leads will be tracked centrally with <strong>pipeline visibility, lead scoring</strong>, automated follow-ups, and continuous conversion optimization to maximize deal closure rates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-agents" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>AI Agents & Automation System</h2>
+            </div>
+            <div class="two-col-grid">
+                <div class="image-block">
+                    <svg class="svg-container" width="100%" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <style>
+                            .node-path { stroke: var(--color-primary); stroke-width: 1; opacity: 0.4; }
+                            .node-circle { fill: var(--color-foreground); stroke: var(--color-secondary); stroke-width: 2; }
+                        </style>
+                        
+                        <path class="node-path" d="M100 50 L200 125"/>
+                        <path class="node-path" d="M100 50 L50 180"/>
+                        <path class="node-path" d="M200 125 L350 80"/>
+                        <path class="node-path" d="M200 125 L300 190"/>
+                        <path class="node-path" d="M50 180 L300 190"/>
+                        
+                        <circle class="node-circle" cx="100" cy="50" r="10"/>
+                        <circle class="node-circle" cx="200" cy="125" r="12"/>
+                        <circle class="node-circle" cx="350" cy="80" r="8"/>
+                        <circle class="node-circle" cx="50" cy="180" r="10"/>
+                        <circle class="node-circle" cx="300" cy="190" r="15"/>
+                        
+                        <text x="100" y="55" fill="var(--color-text)" font-size="10" text-anchor="middle" font-family="var(--font-main)">LEAD CAPTURE</text>
+                        <text x="200" y="130" fill="var(--color-secondary)" font-size="14" font-weight="700" text-anchor="middle" font-family="var(--font-heading)">AI AGENT HUB</text>
+                        <text x="350" y="70" fill="var(--color-text)" font-size="10" text-anchor="middle" font-family="var(--font-main)">CRM SYNC</text>
+                        <text x="300" y="210" fill="var(--color-text)" font-size="10" text-anchor="middle" font-family="var(--font-main)">24/7 SUPPORT</text>
+                    </svg>
+                </div>
+                <div class="content-block">
+                    <p style="font-size: 1.1em; margin-bottom: 20px;">
+                        The WhatsApp AI Agent system ensures no lead is ever missed, providing instantaneous, intelligent responses tailored to global markets.
+                    </p>
+                    <ul class="feature-list">
+                        <li><strong>24/7 Lead Handling:</strong> Instantaneous replies and service availability regardless of international time zones.</li>
+                        <li><strong>Automated Qualification:</strong> AI-powered system screens and qualifies leads before handing off to sales.</li>
+                        <li><strong>Country-Wise Routing:</strong> Leads are automatically directed to the correct sales or regional contact for faster response times.</li>
+                        <li><strong>CRM Integration:</strong> Seamless connection with lead management processes for pipeline visibility.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="content-section roadmap-section bg-light">
+        <div class="container">
+            <h2 style="text-align: center;">Step-by-Step Execution Roadmap</h2>
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 40px; color: var(--color-subtle-text);">The execution will be handled in structured phases to ensure stability and scalable growth:</p>
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="step-icon">1</div>
+                    <p>Research & Foundation</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-icon">2</div>
+                    <p>Website & SEO</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-icon">3</div>
+                    <p>Social Media Rollout</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-icon">4</div>
+                    <p>Ads Launch</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-icon">5</div>
+                    <p>Automation & Scaling</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-icon">6</div>
+                    <p>Growth Expansion</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px; padding: 25px; border: 1px dashed rgba(255, 255, 255, 0.2); border-radius: 6px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <h4 style="color: var(--color-secondary); font-size: 1.4em; font-family: var(--font-heading); margin-bottom: 10px;">Reporting, Analytics & Optimization</h4>
+                <p style="font-size: 1.1em; color: var(--color-text);">
+                    Weekly and monthly reports will track KPIs, lead quality, conversion performance, and market-wise growth to drive data-backed optimization and continuous improvement.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section cta-final-section">
+        <div class="container">
+            <h3>Why SPARK GEN MEDIA?</h3>
+            <p style="font-size: 1.3em; margin-bottom: 20px; color: var(--color-text);">We bring: international B2B expertise, performance-driven execution, strategic thinking, and a <strong>long-term partnership mindset</strong>.</p>
+
+            <div class="contact-box">
+                <h4>Conclusion & Next Steps</h4>
+                <p>We look forward to partnering with Vivana Foods Pvt Ltd to build a globally trusted B2B food brand and scalable digital acquisition system.</p>
+                <div class="contact-info">
+                    <p><strong>Phone:</strong> +91 9907416727</p>
+                    <p><strong>Email:</strong> sparkgenmedia.official@gmail.com</p>
+                    <p><strong>Website:</strong> www.sparkgenmedia.com</p>
+                </div>
+                <a href="mailto:sparkgenmedia.official@gmail.com" class="cta-button primary-cta">Schedule the Partnership Kickoff</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Proposal Prepared for: Vivana Foods Pvt Ltd | Prepared by: SPARK GEN MEDIA</p>
+            <p>&copy; 2025 SPARK GEN MEDIA. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919907416727" class="whatsapp-float" target="_blank" rel="noopener">
+        <svg class="whatsapp-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.245 1.407 1.431-5.33-0.322-0.527c-1.229-2.006-1.847-4.326-1.847-6.855 0-7.384 5.966-13.467 13.56-13.467s13.56 6.083 13.56 13.467-5.966 13.467-13.56 13.467zM22.987 19.433c-0.377-0.189-2.234-1.104-2.581-1.229-0.347-0.126-0.599-0.189-0.852 0.189s-0.979 1.229-1.2 1.481c-0.221 0.252-0.442 0.283-0.819 0.095s-1.598-0.589-3.043-1.88c-1.125-1.004-1.884-2.244-2.105-2.621s-0.024-0.582 0.166-0.771c0.17-0.169 0.378-0.441 0.567-0.662s0.252-0.378 0.378-0.631c0.126-0.252 0.063-0.473-0.032-0.662s-0.852-2.055-1.168-2.815c-0.308-0.74-0.62-0.64-0.852-0.652-0.221-0.011-0.473-0.013-0.725-0.013s-0.662 0.094-1.009 0.472c-0.347 0.378-1.325 1.296-1.325 3.16s1.357 3.666 1.546 3.918c0.189 0.252 2.665 4.072 6.458 5.712 0.903 0.391 1.609 0.625 2.159 0.799 0.907 0.288 1.732 0.247 2.383 0.15 0.727-0.109 2.234-0.914 2.549-1.796s0.315-1.64 0.221-1.796c-0.095-0.157-0.347-0.252-0.725-0.441z"/>
+        </svg>
+    </a>
+    
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+        
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+                    menuToggle.setAttribute('aria-expanded', !isExpanded);
+                });
+        
+                // Close menu when a link is clicked
+                mainNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
